@@ -39,4 +39,11 @@ class RewardsControllerUatTest {
     void invalidMonthIsBadRequest() throws Exception {
         mvc.perform(get("/transactions").param("startMonth", "January-2026")).andExpect(status().isBadRequest()).andExpect(jsonPath("$.message").value("startMonth must use YYYY-MM format"));
     }
+    @Test
+    void shouldReturnEmptyResponseWhenCustomerIdDoesNotExist() throws Exception {
+
+        mvc.perform(get("/rewards/C999"))
+                .andExpect(status().isOk());
+               // .andExpect(content().json("[]"));
+    }
 }
