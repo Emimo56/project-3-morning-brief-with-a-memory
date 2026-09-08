@@ -1,0 +1,18 @@
+Here's Project 3 — "The morning brief with a memory" (medium difficulty, ~45-60 min, builds on Concept 6 the schedule + Concept 12 the spine):
+
+Set up a throwaway repo — don't use real work, since this loop edits files on its own.
+Create progress.md — start it empty or with a placeholder "Done" / "Open" section. This is the spine your loop reads and writes.
+Write the beat: one prompt that (1) reads progress.md first, (2) gathers something simple —
+open TODO comments in the repo, or the last day's commits, (3) writes a short summary, (4) appends what it found plus the date to progress.md.
+Wrap it as a scheduled heartbeat — /schedule (Claude Code) or a cron/GitHub Actions trigger calling opencode run (OpenCode). Set a run limit first.
+Fire it twice — once now, once again a bit later — and check the second run's summary against the first.
+
+Done when: the second run clearly builds on the first — it doesn't repeat what's already in progress.md. That's proof the spine works. If run two starts from scratch, the loop has no memory yet —
+the fix is almost always that the prompt isn't reading progress.md before it starts.
+
+
+
+
+
+
+

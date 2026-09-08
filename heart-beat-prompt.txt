@@ -1,0 +1,27 @@
+Read progress.md first. Then look at commits made in this repo in the last 24 hours
+(git log --since="24 hours ago" --oneline). Write a short plain-English summary of
+what changed — group related commits if there are several. Skip anything already
+listed as "Done" in progress.md so you never repeat a prior day's summary.
+
+Then append your findings to the "Done" section of progress.md as one dated entry,
+in the format:
+- YYYY-MM-DD: <one or two sentence summary of what the commits did>
+
+If there were no new commits since the last recorded date, write:
+- YYYY-MM-DD: no new commits since last run
+
+Update nothing else in the file. Show me the summary you wrote.
+
+
+===============================================
+=========================================
+============================================
+A few things this is doing on purpose:
+
+"Read progress.md first" is the whole spine habit — skipping it is the #1 way this project fails silently.
+The "skip anything already listed" line is what makes run two provably different from run one —
+ that's your done-check.
+The explicit no-new-commits case matters because a quiet day is a valid, useful log entry, not a failure.
+
+Wrap this in your /schedule (Claude Code) or cron + opencode run call, then fire it twice with a
+few commits in between to see the diff in behavior.
