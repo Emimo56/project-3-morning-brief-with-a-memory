@@ -43,7 +43,7 @@ class RewardsControllerUatTest {
     void shouldReturnEmptyResponseWhenCustomerIdDoesNotExist() throws Exception {
 
         mvc.perform(get("/rewards/C999"))
-                .andExpect(status().isOk());
-               // .andExpect(content().json("[]"));
+                .andExpect(status().isOk())
+                .andExpect(content().json("[]"));
     }
 }
